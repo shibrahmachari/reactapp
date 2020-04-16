@@ -71,8 +71,6 @@ setTimeout(() => {
              <Fragment>
               
              <Search 
-              clearUsers={clearUsers} 
-              showClear={users.length>0? true: false}
               showAlert={showAlert} />
               <User loading={loading} users={users}/>
                </Fragment>
