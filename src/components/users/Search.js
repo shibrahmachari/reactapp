@@ -25,9 +25,9 @@ const githubContext= useContext(GithubContext);
                 onChange={onChange} />
                 <input type="submit" value="search" className="btn btn-dark btn-block" />
                 </form>
-               {showClear && ( <button 
+               {githubContext.users.length>0 && ( <button 
                 className='btn btn-light btn-block'
-                onClick={clearUsers}> 
+                onClick={githubContext.clearUsers}> 
                 clear
                 </button>
                 )}
@@ -37,8 +37,6 @@ const githubContext= useContext(GithubContext);
 }
 
 Search.propTypes={
-    clearUsers:PropTypes.func.isRequired,
-    showClear:PropTypes.func.isRequired,
     setAlert:PropTypes.func.isRequired
 };
 export default Search;
